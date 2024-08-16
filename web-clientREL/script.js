@@ -23,3 +23,4 @@ document.getElementById('inputForm').addEventListener('submit', async function (
         console.error('Error sending input:', error);
     }
 });
+console.log("RUNNING")
