@@ -40,7 +40,7 @@ namespace RobloxInputApi.Controllers
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
             // Replace with your Roblox game server URL
-            var url = "https://your-roblox-server-url/api/receiveinput";
+            var url = "https://aVRK8fWlihkopkQ.roblox.com/api/receiveinput";
 
             var response = await httpClient.PostAsync(url, content);
 
