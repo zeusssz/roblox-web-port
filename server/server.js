@@ -5,27 +5,4 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// Use CORS to allow requests from your frontend
-app.use(cors());
-
-// Your Roblox API key
-const ROBLOX_API_KEY = 'YOUR_ROBLOX_API_KEY';
-
-// Example endpoint to get user information
-app.get('/user/:username', async (req, res) => {
-    const username = req.params.username;
-    try {
-        const response = await axios.get(`https://apis.roblox.com/users/v1/users?usernames=${username}`, {
-            headers: {
-                'x-api-key': ROBLOX_API_KEY
-            }
-        });
-        res.json(response.data);
-    } catch (error) {
-        res.status(500).send('Error retrieving user data');
-    }
-});
-
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+2Dq%2PgliYr`\"F(c!/l!Z$:h!Win^#;YT.\"'>U[4]F<t\\Mji&\"<P!.b.N!+>j-!(m4k!.+_H!1*Zc!,V]9!.\"YG!8RVT!-J8A!.b.N!:9ad!0.$Z!.FqK!$;4A!2KSp!-\\GD!)!=m!4)Y*!-J;B!:Bmg!:Bmg!:Bmg!:Bmg!-&#>!5nj;!!*'\"!9aIa!9aIa!07-\\!7LoJ!-nSF!3#u!!:'Ub!.\"YG!'C5]!8@MS!;c`r!.\"YG!\"K=FU'(Ng!Wp(<Jcu8<*Sif_!s;$8\"J,_uR1A'U!WrMs-c-&iJd:9<!WrK*_?U1c#-7h,\"<IWk!<N>\"#=8HF\"H!5c!<LaT!m1WH!o=!c!<M0a`s__P\"1e`E!<NBF![n*O!WiN,ao_\\Ojp-nO!XSqb\"M+aC!mrEV\"UVmGScSdN$2t-\\!l>-Jm3N,=#77LDTf.W/$,Qb\\\"f;>-iW8`Sc3=U>-0>D`!sue'!WiZTOoh3U#nt#Xl2h:6+0#GF#m+?!!==nol2q(oh&/Z`#m/Z_TfEG)\"5sBo\"UV=9;F_%F\"2Y/#!t\"5nXoX[d$&/M_!C@*u!WjJG!jhtH#Qb&i!WjPI!$21c\"p,hi#ONh=!?qdN*[1ik&?GmV#Qb(_!<N<D+pZLDX8sLN!Wq]h!WjDe#GF&W!?qdN!X&Q+!jht0!ZiNjrAq\"\\+p\\5O]E&'8!GWk[z!!!0&!!!9)!!$U5!!(.G!!(.G!!(@M!!(@M!!(@M!!(@M!!&;b!!(:K!!(:K!!(RS!!!'#!!%0H!!\"ML!!!r<!!#.a!!%BN!!%NR!!%NR!!%ZV!!%TT!!'A1!!'M5!!'G3!!%NR!!'k?!!'k?!!'qA!!'k?!!'k?!!(.G!!(.G!!(:K!!(:K!!(RS!!(RS!!$F-!!#.^!!$R4!!!B3Y+c%#!Y5DTlKA=P!Zmm^<$EN?(($Zo,.TW=kp7OM%LMAG*hbMl+sNin$(WOI+rD@&mK?.Z\"9JW8/-5k`0HTNC\"'>UGSIJOB,,$t&m4]U3/Q<o<Kbb!Z,p'`,<$EN[3!m\\f*ec7H+sNin$&pJ;+rD@&%Pd31!YTao+qjh^BbKP/!Y8rG!Y9)glKA=P!Zn='<$EN[3!m\\f,)$d=kp7CI,#fa1V%*g249?]D*i9/X;o'XZ!Y:@n!Wims!?UOi\"'>UGaZ<BF,,$t&nMqf(2[P0R*l/Lh+sN^?$/%9^\\Mjhg3$,m=<$EN_%LKrb![8I&)N\"ZM!<Nc-!]:#\\%U/u9!]pJM$iLJlapnCQ!!!!$!!!!,!!!!\"!!!!:!!!!T!!!!/!!!!*#LK1J!Winj!<N<5huNl\\&)[Jj%&F+gM%'Lf%horIkQ=og)UTI&*ZhjN$0``WTf<@t1E*e_<$!*W%LLN$!Zi0s!eLPihuNl\\%lbKmkQ=og)P%=:*Zg\"N$+UfiN@\\$M*hbP\"ff0nH(fVOtV%*fk/-6k0)AWZE!YPPX!lbDC/I)mi!Y<'I!WimK)X?Mg=99DW-r_6/Tf<A#3Z@B+<$!*7((%Me)W`kV*Zh-f$0``WKbb!*2]BLG<$!*7(('4O)P')l*ZhjN$0``WKbauK()j\"n<$!*W%LMMC!Zi0s`W<>!#7:MFG)86)\"ptq0!SRR_!?hNQ\"p,=2!WiE6_uUeAkQ=og)RV.r*Zg\"N$0``SaZ<BB*i0>Q[4MG$(`LBt!Y,\\A!Y=>m)X?Mg=99Cl'N?+pTf<A+*?M$e$0``SYm\")J*hbP\"SNe1+2[S^p)VI5P*Zh\"7$,n\\AKbb!Z,oVn1<$!*W%LI\\#!Zi0s$3DI/\"qH@k_uTq^\"Tj;WBEA5GVudn&kQ=og)PmjA*Zh-f$&'-5m4_K\\*k=39KbbTS*E4($V%*g.$j%Ie)@lR%#EAfdV?J]N3s#Ho1]d_?!WWi5zzz!!\"DI!!!B,!!!H.z!!\"#>!!!o;!!&nt!!\"qX!!\"PM!!&hr!!#[p!!#[p!!#[p!!#[p!!$L/!!\"tY!!&eq!!%'?!!#Lh!!!$\"!!#Ol!!#Ol!!&8a!!#pt!!&ks!!#ar!!#ar!!!90V5\".p!Y=Vu!Wio!!<N<5$o[D7\"'>U__$O(%3h\\M>`A9Qc2[S^p2RsT&3]a)I$,HoL3Z'aVRK8fWli@.h%kop,kQ=og2O-1\"3]af1$)%heKb.3E3k70UV%,D;02stnV%*fs2?GoV2BmkW&-<2RC_?dN%pT1+\"@=.2!Y8g\"lKA=P!]KQ^<'!(63!mP[3k70Ukp86Y%9,ALV%*gb#6Hq'2?FpSm61U>#Hn.Zh?::k/YiXR!W`K,!Y:Lu!Win\"!B06,\"'>U_jYg(!3e\\=Ukp8C$2[S^p2MiYX3]a)I$0=&H3Z'd;\"c<Bmli@.h&%hp$lKA=P!]JjT<'!'o(('4O3h\\M>W<>,A5?'[)\\MjiZ,rV;Y<'!(:%LJ7^!]h/V(6/G\\\"ptuZ'#\"C2\"O@)]!Wio%!B06,\"'>U_iB:.$3k70Ukp86Y&QCePTf<A#3]af1$&'-Qh)\\Lr3k70Ukp87(5?'[)\\MjiZ,rW.o<'!(:%LLN'!]h/V%K]6(&p>o0')i+o!Wn5[%dcF]Q3%T,!<N<5]E1\"VkQ=og2Us6U3]`ro$,n\\YJLXV[3e\\=UKeG?D\"]RNDV%*f_.KVXJ2RWZ2&-;n7_uYYr!Winr!]K?-\"'>U_Kdp%_3e\\=Ukp86e2cMh!V%*gB3<D5Y2?G?_`>Cc?&)76g!Y:4l2X9K.
