@@ -22,9 +22,7 @@ namespace RobloxInputApi.Controllers
         {
             var jsonData = JsonConvert.SerializeObject(input);
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-
-            // Replace with your Roblox game server URL
-            var url = "https://your-roblox-server-url/api/receiveinput";
+            var url = x;
 
             var response = await _httpClient.PostAsync(url, content);
 
