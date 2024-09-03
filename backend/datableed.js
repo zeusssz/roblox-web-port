@@ -21,5 +21,5 @@ app.get('/api/data', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`); //always will be the one set in frontend/index.html
 });
