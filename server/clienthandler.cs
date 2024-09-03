@@ -9,7 +9,7 @@ namespace RobloxWebApi.Controllers
     public class RobloxController : ControllerBase
     {
         private readonly HttpClient _httpClient;
-        private const string RobloxApiKey = "YOUR_ROBLOX_API_KEY";
+        private const string RobloxApiKey = Environment.GetEnvironmentVariable("API-KEY");
 
         public RobloxController(HttpClient httpClient)
         {
