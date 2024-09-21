@@ -7,7 +7,7 @@ namespace RobloxDataApi.Controllers
     [Route("api/[controller]")]
     public class RobloxDataController : ControllerBase
     {
-        private static List<object> gameData = new List<object>(); // Store game data
+        private static List<object> gameData = new List<object>(); 
 
         [HttpPost]
         public IActionResult PostData([FromBody] object data)
