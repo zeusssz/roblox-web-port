@@ -7,4 +7,3 @@ The only reason it's on GitHub is because it was a hassle to store on my PC. The
 TODO
 - fix ui
 - fix lag
-- fix datasending
